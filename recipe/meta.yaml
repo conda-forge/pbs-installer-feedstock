@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pbs_installer-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pbs_installer-{{ version }}.tar.gz
   sha256: d547d9a5bb564791102d138346bff609659c16acc0147fd701755a2eae8f2050
 
 build:
@@ -14,15 +14,15 @@ build:
     - pbs-install = pbs_installer.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pdm-backend
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -32,6 +32,7 @@ test:
     - pbs-install --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/frostming/pbs-installer
