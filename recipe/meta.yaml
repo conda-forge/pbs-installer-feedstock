@@ -1,5 +1,5 @@
 {% set name = "pbs-installer" %}
-{% set version = "2025.3.11" %}
+{% set version = "2025.3.17" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pbs_installer-{{ version }}.tar.gz
-  sha256: 150986b56648e2d04e99fafe24c165fa94cfa8385b93d6bf9b82925c3d57d064
+  sha256: dde058f925b989c1d3bd90739c16ffd0e68732f7716e4d1e01ca480d00a67560
 
 build:
   entry_points:
