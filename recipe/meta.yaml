@@ -23,6 +23,8 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
+    - zstandard
+    - httpx
 
 test:
   imports:
