@@ -1,5 +1,5 @@
 {% set name = "pbs-installer" %}
-{% set version = "2026.10.13" %}
+{% set version = "2026.10.21" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/pbs_installer-{{ version }}.tar.gz
-  sha256: 888654540e18a358f0dd1d20838fa7231f47a2b11dd803f457148cda88cabe6a
+  sha256: 265c46b81ecc7ffddcc4607be0b87c0797c91911e1492325a563428f569a20c5
 
 build:
   entry_points:
